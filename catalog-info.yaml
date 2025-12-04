@@ -1,0 +1,27 @@
+# Application source code component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "csa-demo-container"
+  description: "Source code for csa-demo-container"
+  tags:
+    - development
+    - container
+    - demo
+    - csa
+  links:
+    - url: https://github.com/mjay-bs-test/csa-demo-container
+      title: Application Source Code
+      icon: github
+    - url: https://github.com/mjay-bs-test/csa-demo-container-deploy
+      title: Deployment Repository
+      icon: github
+  annotations:
+    github.com/project-slug: mjay-bs-test/csa-demo-container
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: development
+  owner: "csa"
+  dependsOn:
+    - component:default/csa-demo-container-deploy
